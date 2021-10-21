@@ -24,4 +24,4 @@ add this config to appsettings.json :
 ##### google : google options
 
 ### Logger
-#####type : [ Default ] 
+##### type : [ Default ] 
