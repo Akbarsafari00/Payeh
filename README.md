@@ -4,8 +4,7 @@ add this config to appsettings.json :
  "Payeh": {
     "Services": {
       "Translator": {
-         "Type": "Google", 
-
+        "Type": "Google", 
         "Google": {
           "ApiKey": "your_api_key"
         }
@@ -21,7 +20,8 @@ add this config to appsettings.json :
 ## Services
 
 ### Translator
-type : Default | Google
+type : [ Default | Google ]
+google : google options
 
 ### Logger
-type : Default 
+type : [ Default ] 
