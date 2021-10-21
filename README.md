@@ -4,14 +4,14 @@ add this config to appsettings.json :
  "Payeh": {
     "Services": {
       "Translator": {
-        "Type": "Google", 
-//Default
+         "Type": "Google", <!-- Default | Google -->
+
         "Google": {
-          "ApiKey": "AIzaSyBig3LjwTquboGMJHV__ZznTvdZFkrRuAQ"
+          "ApiKey": "your_api_key"
         }
       },
       "Logger": {
-        "Type": "Bps"
+        "Type": "Default" , <!-- Default -->
       }
     }
   }
