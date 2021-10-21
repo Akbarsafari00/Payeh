@@ -17,11 +17,11 @@ add this config to appsettings.json :
 }
 
 ```
-## Services
+# Services
 
-### Translator
-##### type : [ Default | Google ]
-##### google : google options
+## Translator
+#### type : [ Default | Google ]
+#### google : google options
 
-### Logger
-##### type : [ Default ] 
+## Logger
+#### type : [ Default ] 
