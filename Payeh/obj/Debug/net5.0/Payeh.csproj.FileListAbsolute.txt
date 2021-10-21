@@ -1,0 +1,12 @@
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\bin\Debug\net5.0\Payeh.deps.json
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\bin\Debug\net5.0\Payeh.dll
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\bin\Debug\net5.0\ref\Payeh.dll
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\bin\Debug\net5.0\Payeh.pdb
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.csproj.AssemblyReference.cache
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.AssemblyInfoInputs.cache
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.AssemblyInfo.cs
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.csproj.CoreCompileInputs.cache
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.dll
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\ref\Payeh.dll
+C:\Users\akbar\RiderProjects\Hania.Core\Payeh\obj\Debug\net5.0\Payeh.pdb
