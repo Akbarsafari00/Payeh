@@ -20,8 +20,8 @@ add this config to appsettings.json :
 # Services
 
 ## Translator
-#### type : [ Default | Google ]
-#### google : google options
+- type : [ Default | Google ] 
+- google : google options
 
 ## Logger
-#### type : [ Default ] 
+- type : [ Default ] 
