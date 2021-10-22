@@ -15,7 +15,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
         public string PostalCode { get; private set; }
         public string City { get; private set; }
         public string State { get; private set; }
-        public string FullAddress { get; private set; }
+        public string Value { get; private set; }
 
         #endregion
 
@@ -48,7 +48,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             ApartmentNumber = apartmentNumber;
             Floor = floor;
             PostalCode = postalCode;
-            FullAddress =
+            Value =
                 $"[{city}]-[{state}]-[{path}:{description}]-[{buildingNumber}]-[{apartmentNumber}]-[{postalCode}]";
         }
 
@@ -79,13 +79,13 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
         #region Operator Overloading
 
-        public static explicit operator string(Address Address) => Address.FullAddress;
+        public static explicit operator string(Address Address) => Address.Value;
 
         #endregion
 
         #region Methods
 
-        public override string ToString() => FullAddress;
+        public override string ToString() => Value;
 
         #endregion
     }

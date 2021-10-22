@@ -7,7 +7,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
         #region Properties
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public string FullName { get; private set; }
+        public string Value { get; private set; }
         #endregion
 
         #region Constructors and Factories
@@ -24,7 +24,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             }
             FirstName = firstName;
             LastName = lastName;
-            FullName = $"{firstName} {lastName}";
+            Value = $"{firstName} {lastName}";
         }
         #endregion
 
@@ -43,11 +43,11 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
 
         #region Operator Overloading
-        public static explicit operator string(Name name) => name.FullName;
+        public static explicit operator string(Name name) => name.Value;
         #endregion
 
         #region Methods
-        public override string ToString() => FullName; 
+        public override string ToString() => Value; 
         #endregion
     }
 }

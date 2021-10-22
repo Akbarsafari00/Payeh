@@ -9,7 +9,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
         public string Country { get; private set; }
         public string Number { get; private set; }
-        public string FullNumber { get; private set; }
+        public string Value { get; private set; }
 
         public bool Verify { get; private set; }
         public DateTime? VerifyAt { get; private set; }
@@ -44,7 +44,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
             Country = country.Replace("+", "").TrimStart(new Char[] {'0'});
             Number = number.TrimStart(new Char[] {'0'});
-            FullNumber = Country + Number;
+            Value = Country + Number;
             
             UpdateVerify(verify);
         }
@@ -73,13 +73,13 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
         #region Operator Overloading
 
-        public static implicit operator string(Phone phone) => phone.FullNumber;
+        public static implicit operator string(Phone phone) => phone.Value;
 
         #endregion
 
         #region Methods
 
-        public override string ToString() => FullNumber;
+        public override string ToString() => Value;
 
         public void UpdateVerify(bool isVerify)
         {
