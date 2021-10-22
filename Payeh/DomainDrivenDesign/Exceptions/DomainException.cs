@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 
 namespace Payeh.DomainDrivenDesign.Exceptions
 {
@@ -7,7 +8,7 @@ namespace Payeh.DomainDrivenDesign.Exceptions
         public string Error { get; set; }
         public object Parameters { get; set; }
 
-        public DomainException(string error,string? message, object parameters = null) : base(message)
+        public DomainException(string error,string? message, object parameters = null!) : base(message)
         {
             Error = error;
             Parameters = parameters;

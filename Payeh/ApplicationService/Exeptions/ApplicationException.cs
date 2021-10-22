@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Net;
 
 namespace Payeh.ApplicationService.Exeptions
@@ -9,7 +10,7 @@ namespace Payeh.ApplicationService.Exeptions
         public object Parameters { get; set; }
         public HttpStatusCode Status { get; set; }
 
-        public ApplicationException(HttpStatusCode status,string error,string? message,  object parameters = null) : base(message)
+        public ApplicationException(HttpStatusCode status,string error,string? message,  object parameters = null!) : base(message)
         {
             Error = error;
             Status = status;
