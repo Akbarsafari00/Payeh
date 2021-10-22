@@ -28,7 +28,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             {
                 throw new DomainException("VALIDATION_ERROR","number field is length must between 10 - 11", new {maxLength = 11 , minLength=10});
             }
-            if (country.Length >= 1)
+            if (country.Length < 1)
             {
                 throw new DomainException("VALIDATION_ERROR","country field is length must be greater then equal 1", new { minLength=1});
             }

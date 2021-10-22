@@ -21,7 +21,7 @@ namespace Payeh
             var payehOptions = new PayehOptions();
             configuration.GetSection("Payeh").Bind(payehOptions);
 
-            services.AddSingleton<PayehOptions>(payehOptions);
+            services.AddSingleton(payehOptions);
 
             if (payehOptions.Cors is {Enabled: true})
             {
@@ -55,7 +55,7 @@ namespace Payeh
                                         Id = "Bearer"
                                     }
                                 },
-                                System.Array.Empty<string>()
+                                Array.Empty<string>()
                             }
                         });
                     }
@@ -99,7 +99,7 @@ namespace Payeh
             return services;
         }
 
-        private static IServiceCollection AddServices(this IServiceCollection services,
+        private static void AddServices(this IServiceCollection services,
             PayehOptions payehOptions)
         {
             if (payehOptions.Services.Translator != null)
@@ -126,7 +126,6 @@ namespace Payeh
             }
 
             services.AddTransient<IPayehService, PayehService>();
-            return services;
         }
 
         public static IApplicationBuilder UsePayeh(this IApplicationBuilder app, IConfiguration configuration)
@@ -134,7 +133,7 @@ namespace Payeh
             var payehOptions = new PayehOptions();
             configuration.GetSection("Payeh").Bind(payehOptions);
 
-            app.UseMiddleware<ErrorHandlingMiddleware>();
+           
             
             if (payehOptions.Authorization is {Enabled: true})
             {
@@ -152,7 +151,7 @@ namespace Payeh
                     options => options
                         .AllowAnyHeader()
                         .AllowAnyMethod()
-                        .SetIsOriginAllowed((host) => true)
+                        .SetIsOriginAllowed(_ => true)
                         .AllowCredentials()
                 );
             }
@@ -163,7 +162,8 @@ namespace Payeh
                 app.UseSwaggerUI(c =>
                     c.SwaggerEndpoint(payehOptions.Swagger.SwaggerDoc.Url, payehOptions.Swagger.SwaggerDoc.Name));
             }
-
+            
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             
             return app;
         }
