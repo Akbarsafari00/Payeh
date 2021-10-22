@@ -5,7 +5,9 @@
         <AssemblyName>Payeh</AssemblyName>
         <RootNamespace>Payeh</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
+        <Authors>Akbar Ahmadi Saray</Authors>
+        <PackageTags>NetCore,C#</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
