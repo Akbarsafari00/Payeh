@@ -18,7 +18,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             {
                 throw new InvalidValueObjectStateException("ValidationErrorFirstNameIsRequire", nameof(Name));
             }
-            if (firstName.Length < 2 || firstName.Length > 150)
+            if (firstName.Length is < 2 or > 150)
             {
                 throw new InvalidValueObjectStateException("ValidationErrorFirstNameLength", nameof(Name), "2", "250");
             }

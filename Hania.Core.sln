@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payeh", "Payeh\Payeh.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payeh.Api.Sample", "Payeh.Api.Sample\Payeh.Api.Sample.csproj", "{863D06CE-FFF9-4CB4-B5AB-3036AD38E700}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payeh.Console.Sample", "Payeh.Console.Sample\Payeh.Console.Sample.csproj", "{452DDD6F-504E-477A-8F65-BF04FB959BB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{863D06CE-FFF9-4CB4-B5AB-3036AD38E700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863D06CE-FFF9-4CB4-B5AB-3036AD38E700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863D06CE-FFF9-4CB4-B5AB-3036AD38E700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452DDD6F-504E-477A-8F65-BF04FB959BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452DDD6F-504E-477A-8F65-BF04FB959BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452DDD6F-504E-477A-8F65-BF04FB959BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452DDD6F-504E-477A-8F65-BF04FB959BB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

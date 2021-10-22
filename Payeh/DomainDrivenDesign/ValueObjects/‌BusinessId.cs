@@ -50,6 +50,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
 
         public static explicit operator Guid(BusinessId title) => title.Value;
+        //Create BusinessId From Guid
         public static implicit operator BusinessId(Guid value) => new() { Value = value };
 
     }
