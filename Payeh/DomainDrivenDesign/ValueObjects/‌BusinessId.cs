@@ -12,7 +12,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                throw new InvalidValueObjectStateException("ValidationErrorIsRequire", nameof(BusinessId));
+                throw new DomainException("VALIDATION_ERROR","value field is require", new {fields = new [] {nameof(value)}});
             }
             if (Guid.TryParse(value, out Guid tempValue))
             {
@@ -20,7 +20,7 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             }
             else
             {
-                throw new InvalidValueObjectStateException("ValidationErrorInvalidValue", nameof(BusinessId));
+                throw new DomainException("VALIDATION_ERROR","cannot parse value to guid", new {id = value});
             }
         }
         private BusinessId()

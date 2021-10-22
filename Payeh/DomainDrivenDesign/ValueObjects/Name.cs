@@ -16,11 +16,11 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(firstName))
             {
-                throw new InvalidValueObjectStateException("ValidationErrorFirstNameIsRequire", nameof(Name));
+                throw new DomainException("VALIDATION_ERROR","firstName field is require", new {fields = new [] {nameof(firstName)}});
             }
             if (firstName.Length is < 2 or > 150)
             {
-                throw new InvalidValueObjectStateException("ValidationErrorFirstNameLength", nameof(Name), "2", "250");
+                throw new DomainException("VALIDATION_ERROR","firstName field is length must between 2 - 150", new {maxLength = 150 , minLength=2});
             }
             FirstName = firstName;
             LastName = lastName;
