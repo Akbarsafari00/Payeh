@@ -1,4 +1,5 @@
-﻿using Payeh.DomainDrivenDesign.Exceptions;
+﻿using System;
+using Payeh.DomainDrivenDesign.Exceptions;
 
 namespace Payeh.DomainDrivenDesign.ValueObjects
 {
@@ -8,14 +9,16 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
 
         public string Value { get; private set; }
         public bool Verify { get; private set; }
+        public DateTime? VerifyAt { get; private set; }
+        public DateTime? VerifyAtUtc { get; private set; }
 
         #endregion
 
         #region Constructors and Factories
 
-        public static Email FromString(string value, bool verify) => new Email(value, verify);
+        public static Email FromString(string value, bool verify = false) => new Email(value, verify);
 
-        public Email(string value, bool verify)
+        public Email(string value, bool verify = false)
         {
             if (string.IsNullOrWhiteSpace(value))
             {
@@ -30,7 +33,8 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
             }
 
             Value = value;
-            verify = verify;
+           
+            UpdateVerify(verify);
         }
 
         private Email()
@@ -64,6 +68,22 @@ namespace Payeh.DomainDrivenDesign.ValueObjects
         #region Methods
 
         public override string ToString() => Value;
+
+        public void UpdateVerify(bool isVerify)
+        {
+            if (isVerify)
+            {
+                Verify = true;
+                VerifyAt = DateTime.Now;
+                VerifyAtUtc = DateTime.UtcNow;
+            }
+            else
+            {
+                Verify = false;
+                VerifyAt = null;
+                VerifyAtUtc = null;
+            }
+        }
 
         #endregion
     }
